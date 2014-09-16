@@ -120,6 +120,23 @@ table{
     padding-left: 10px;
 }
 
+.icon {
+    height: 30px;
+    width: 30px;
+    background-color: #ffd800;
+    display:inline-block ;
+    margin: 5px; 
+}
+
+.icon.stisnene{    
+    background-color: red; 
+}
+
+.icon.wi-fi{    
+    background-color: blue; 
+}
+
+
 .hodnoceniPopisBar{
     height: 73px;
     margin-bottom: 4px;

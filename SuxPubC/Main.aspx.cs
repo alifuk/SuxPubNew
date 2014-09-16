@@ -190,9 +190,9 @@ namespace SuxPubC
                         blok += VypisPiva(int.Parse(dataReader["pubId"].ToString()));
                         blok += "</table></div>";
                         //Atrakce
-                        blok += "<div class='atrakce'><table>";
+                        blok += "<div class='atrakce'>";
                         blok += VypisAtrakce(dataReader["prostornost"].ToString(), int.Parse(dataReader["pubId"].ToString()));
-                        blok += "</table></div>";
+                        blok += "</div>";
 
                         //Atrakce i s detailem
                         /*blok += "<div class='atrakceFull'><table>";
@@ -215,7 +215,17 @@ namespace SuxPubC
 
         }
 
-        
+        public static string OdstranitDiakritiku(string Text)
+        {
+            string stringFormD = Text.Normalize(System.Text.NormalizationForm.FormD);
+            System.Text.StringBuilder retVal = new System.Text.StringBuilder();
+            for (int index = 0; index < stringFormD.Length; index++)
+            {
+                if (System.Globalization.CharUnicodeInfo.GetUnicodeCategory(stringFormD[index]) != System.Globalization.UnicodeCategory.NonSpacingMark)
+                    retVal.Append(stringFormD[index]);
+            }
+            return retVal.ToString().Normalize(System.Text.NormalizationForm.FormC);
+        }
 
 
         protected string VygenerujHvezdy(int pocetHvezd)
@@ -343,16 +353,15 @@ namespace SuxPubC
             }
 
 
-            //pokud je lichý počet řádků, přidej prázdný
-            if (dtAtrakce.Rows.Count % 2 == 1)
-            {
-                dtAtrakce.Rows.Add(" ", " ");
-            }
+           
 
             int pocet = dtAtrakce.Rows.Count;
-            for (int i = 0; i < pocet / 2; i++) //vypsání řádků
+            for (int i = 0; i < pocet; i++) //vypsání řádků
             {
-                atrakce += "<tr><td><h5>" + dtAtrakce.Rows[i].ItemArray[0] + "</h5></td><td><h5>" + dtAtrakce.Rows[pocet / 2 + i].ItemArray[0] + "</h5></td></tr>";
+                string nazev = OdstranitDiakritiku( dtAtrakce.Rows[i].ItemArray[0].ToString().ToLower().Replace(" ",""));
+
+
+                atrakce += "<span class='icon " + nazev + "'> </span>";
             }
 
             return atrakce;

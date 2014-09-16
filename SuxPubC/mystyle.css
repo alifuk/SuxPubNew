@@ -1,0 +1,171 @@
+﻿/* TODO 
+    - SUX PUB in bg
+    - top menu
+    - text pod logem <small>
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    /*background: url("img/bg.png") no-repeat;*/
+    top: 700px;
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+
+/* 'star-rating' component */
+.starRate {position:relative; margin:0px; overflow:hidden; zoom:1;}
+.starRate ul {width:160px; margin:0; padding:0;}
+.starRate li {display:inline; list-style:none;}
+.starRate a, .starRate b {background:url(img/star_rate.gif) left top repeat-x;}
+.starRate a {float:right; margin:0 80px 0 -144px; width:80px; height:16px; background-position:left 16px; color:#000; text-decoration:none;}
+/*.starRate a:hover {background-position:left -32px;}*/
+.starRate b {position:absolute; z-index:5; width:80px; height:16px; background-position:left -16px;}
+.starRate div b {left:0px; bottom:0px; background-position:left top;}
+.starRate a span {position:absolute; left:-300px;}
+/*.starRate a:hover span {left:90px; width:100%;}*/
+
+#detail {
+    width: 400px;
+    display: block;
+}
+
+h4{
+    font-weight:bold;
+    margin: 0;
+}
+
+h5{
+    margin-top: 0;
+    margin: 0;
+}
+
+
+table{
+    border: 0;
+}
+
+.vyhledavaciSloupec{
+    float:left;
+    display: block;
+    padding: 5px 0 20px 24px;
+}
+
+.hospody-wrapper {
+    margin: 0 auto;
+    width:85%;
+}
+
+.blok {
+    width: 500px;
+    height: 220px;
+    padding: 5px;
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background: #f9fbfe;
+    border-left: 4px solid;
+    border-color: #409FFF;
+    -moz-transition: ease-in-out .2s all;
+    -o-transition: ease-in-out .2s all;
+    -webkit-transition: ease-in-out .2s all;
+    transition: ease-in-out .2s all;
+}
+
+    .blok:hover {
+        background: #cfe9ff;
+        -moz-transition: ease-in-out .2s all;
+        -o-transition: ease-in-out .2s all;
+        -webkit-transition: ease-in-out .2s all;
+        transition: ease-in-out .2s all;
+    }
+
+.ohodnoceni {
+    float: left;
+    width: 155px;
+}
+.ohodnoceni h5{
+    clear: both; 
+    float:left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
+.popis{
+    margin: 5px 0 0 5px;
+    font-weight: 500;
+}
+
+.piva {
+    clear:both;
+    float: left;
+}
+
+.atrakce{
+}
+
+.atrakce h5 {
+    display:block;
+}
+
+.atrakce td{
+    padding-left: 59px;
+}
+
+
+.atrakceFull td{
+    padding-left: 10px;
+}
+
+.hodnoceniPopisBar{
+    height: 73px;
+    margin-bottom: 4px;
+}
+
+.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+@media (min-width:768px){
+    .container{width:750px}}
+@media (min-width:992px){
+    .container{width:970px}}
+@media (min-width:1200px){
+    .container{width:1170px}}
+/*@media (min-width:1600px){
+    .container{width:1660px}}*/
+.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+
+.btn {
+    background: white;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    color: #409FFF;
+    border: none;
+    border: 2px solid #409FFF;
+    -moz-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    -webkit-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    font-size:1em;
+    font-weight:bold;
+}
+
+    .btn:hover {
+        color: white;
+        
+        background: #409FFF;
+        -moz-transition: all ease-in-out .2s;
+        -o-transition: all ease-in-out .2s;
+        -webkit-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s;
+    }
+
+    .clicked {
+        color: white;        
+        background: #409FFF;
+    }
+
+    .small {
+
+    }

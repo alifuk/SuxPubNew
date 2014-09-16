@@ -1,0 +1,56 @@
+﻿<%@ Page Title="SuxPub" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="SuxPubC.Main" %>
+﻿
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="SuxPubC.Main" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+   /* $(document).ready(function () {
+
+        $(".atrakceFull").hide();
+
+        // Při kliknutí na blok obrazit detaily
+        $(".blok").on("click", function () {
+            if ($(this).hasClass("blockBig")) { // Pokud už bylo kliknuto, dát do původní velikosti
+                $(this).removeClass("blockBig");
+
+                $(this).find(".atrakce").show();
+                $(this).find(".atrakceFull").hide();
+
+            }
+            else {
+                $(this).addClass("blockBig");
+
+                $(this).find(".atrakce").hide();
+                $(this).find(".atrakceFull").show();
+
+            }
+            
+        });
+
+
+    }); */
+</script>
+
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <p>
+    Vítejte na stránkách, kde najdete vše potřebné o hospodách v České Lípě.</p>
+<p>
+    <asp:Button ID="btPridat" runat="server" OnClick="btPridat_Click" Text="Přidat hospodu" />
+</p>
+    <asp:PlaceHolder ID="phHledani" runat="server"></asp:PlaceHolder>
+    <asp:Button ID="btHledat" runat="server" Text="Hledat" OnClick="btHledat_Click" UseSubmitBehavior="false" />
+    <h2 style="clear:both;"><asp:Label ID="lbHospodyNadpis" runat="server" Text=""></asp:Label></h2>
+    <div id="hospodyPanel">
+    <asp:PlaceHolder ID="phHospody" runat="server"></asp:PlaceHolder>
+    </div>
+
+<p>
+    &nbsp;</p>
+<p>
+    &nbsp;</p>
+
+</asp:Content>

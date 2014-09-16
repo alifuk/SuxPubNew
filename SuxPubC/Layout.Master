@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="SuxPubC.Layout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SuxPub</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+   
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+         <a href="Main.aspx"><img src="img/bg.png" alt="Logo" width="200" height="200"/></a>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"><!-- Hlavní obsah -->
+        
+            
+        
+        </asp:ContentPlaceHolder>
+        <br />
+        <div style="clear:both;">Vytvořil <a href="Index.aspx">Albus</a> @2014 www.suxboys.eu</div>
+    </div>
+    </form>
+</body>
+</html>
